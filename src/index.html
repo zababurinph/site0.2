@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <base href="<%= htmlWebpackPlugin.options.base %>" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Фотограф Тима Забабурин | zababurin.ph</title>
+    <meta name="description"
+          content="Профессиональный портретный и контент фотограф. В своей работе руководствуюсь главным правилом: забота и индивидуальынй подход. Поэтому беру на себя всю организацию фотосессии. От вас - пожелания, с меня - воплощение и результат!">
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+<main>
+    <%= require('html-loader!./views/main.html').default %>
+    
+    <div class="separator">
+        <div class="text">TAPLINK — TAPLINK — TAPLINK — TAPLINK — TAPLINK — TAPLINK — TAPLINK</div>
+    </div>
+    <%= require('html-loader!./views/taplink.html').default %>
+    
+    <div class="separator">
+        <div class="text">ABOUT — ABOUT — ABOUT — ABOUT — ABOUT — ABOUT — ABOUT — ABOUT — ABOUT</div>
+    </div>
+    <%= require('html-loader!./views/about.html').default %>
+
+    <div class="separator">
+        <div class="text">GALLERY — GALLERY — GALLERY — GALLERY — GALLERY — GALLERY — GALLERY</div>
+    </div>
+    <div class="gallery">
+        <h1>Gallery</h1>
+    </div>
+    
+    <div class="separator">
+        <div class="text">REVIEWS — REVIEWS — REVIEWS — REVIEWS — REVIEWS — REVIEWS — REVIEWS — REVIEWS</div>
+    </div>
+    <div class="reviews">
+        <h1>Reviews</h1>
+    </div>
+    
+    <div class="separator">
+        <div class="text">RATES — RATES — RATES — RATES — RATES — RATES — RATES — RATES — RATES — RATES</div>
+    </div>
+    <div class="rates">
+        <h1>Rates</h1>
+    </div>
+    
+    <div class="separator">
+        <div class="text">CONTACTS — CONTACTS — CONTACTS — CONTACTS — CONTACTS — CONTACTS — CONTACTS</div>
+    </div>
+    <div class="contacts">
+        <h1>Contacts</h1>
+    </div>
+</main>
+</body>
+</html>

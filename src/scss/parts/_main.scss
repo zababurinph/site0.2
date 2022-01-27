@@ -1,0 +1,55 @@
+.main {
+    min-width: 950px;
+    min-height: 100vh;
+    display: flex;
+    flex: 0 0 calc(100vh + 450px);
+    justify-content: left;
+    align-items: flex-start;
+    .photo1 {
+        height: 100vh;
+        min-height: 500px;
+    }
+    .container {
+        position: relative;
+        top: 30vh;
+        width: 80%;
+        text-align: center;
+        .name, .surname {
+            font-size: 5em;
+            font-weight: normal;
+            padding: 0 40px;
+            margin: 0;
+        }
+        .name {
+            text-align: left;
+        }
+        .surname {
+            text-align: right;
+        }
+        .div_mazok {
+            margin-top: 2em;
+            .mazok {
+                height: 100px;
+            }
+            .port {
+                position: relative;
+                bottom: 75px;
+                font-size: 2.6em;
+                font-weight: normal;
+                color: white;
+            }
+        }
+        .div_sos {
+            position: relative;
+            top: calc(50vh - 300px);
+            align-items: center;
+            .sos {
+                font-size: 2.6em;
+            }
+            .strelka {
+                width: 70px;
+                padding-left: 10px;
+            }
+        }
+    }
+}

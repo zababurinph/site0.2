@@ -1,0 +1,25 @@
+html, body {
+    font-family: 'Cormorant-Light', serif;
+    margin: 0;
+}
+
+main {
+    overflow-x: hidden;
+    display: flex;
+}
+
+.separator {
+    border-left: 3px solid rgb(154, 105, 72);
+    border-right: 3px solid rgb(154, 105, 72);
+}
+.separator .text {
+    width: 40px;
+    font-size: 2em;
+    white-space: nowrap;
+    transform-origin: left top;
+    transform: rotate(-90deg) translate(-130vh, 5px);
+}
+
+@media (max-width: 720px) {
+    
+}
