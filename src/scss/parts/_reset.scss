@@ -21,6 +21,10 @@ time, mark, audio, video {
 	vertical-align: baseline;
 	transform-origin: center;
 }
+button {
+	border: 0;
+	font-family: inherit;
+}
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;

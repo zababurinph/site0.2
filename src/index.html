@@ -31,8 +31,8 @@
         <h1>Gallery</h1>
     </div>
     
-    <div class="separator">
-        <div class="text">REVIEWS — REVIEWS — REVIEWS — REVIEWS — REVIEWS — REVIEWS — REVIEWS — REVIEWS</div>
+    <div class="separator" style="background-color: rgb(56, 56, 56);">
+        <div class="text" style="color: white;">REVIEWS — REVIEWS — REVIEWS — REVIEWS — REVIEWS — REVIEWS — REVIEWS — REVIEWS</div>
     </div>
     <div class="reviews">
         <h1>Reviews</h1>
@@ -41,9 +41,7 @@
     <div class="separator">
         <div class="text">RATES — RATES — RATES — RATES — RATES — RATES — RATES — RATES — RATES — RATES</div>
     </div>
-    <div class="rates">
-        <h1>Rates</h1>
-    </div>
+    <%= require('html-loader!./views/rates.html').default %>
     
     <div class="separator">
         <div class="text">CONTACTS — CONTACTS — CONTACTS — CONTACTS — CONTACTS — CONTACTS — CONTACTS</div>
