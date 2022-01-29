@@ -1,48 +1,41 @@
 .about {
-    flex: 0 0 calc(50vh + 930px);
-    min-width: 1140px;
-    min-height: 100vh;
     display: flex;
     align-items: flex-start;
-    position: relative;
-    top: 50px;
-    .photo1 {
-        position: relative;
-        z-index: 10;
-        height: 85vh;
-        min-height: 500px;
-        margin: 0 20px 0 40px;
-    }
-    .container1 {
-        .container2 {
-            display: flex;
-            align-items: flex-start;
-            .text1 {
-                width: 340px;
-                font-size: 2em;
-                position: relative;
-                top: 25vh;
-            }
-            .photo2 {
-                position: relative;
-                z-index: 10;
-                height: 62vh;
-                min-height: 360px;
-                width: 46vh;
-                min-width: 270px;
-                margin: 0 20px;
-            }
-        }
-        .text2 {
-            width: calc(50vh + 780px);
-            font-size: 2em;
+    flex-direction: column;
+    margin-top: 50px;
+    .container {
+        display: flex;
+        .photo1 {
             position: relative;
-            z-index: 9;
-            bottom: 30px;
-            right: 50vh;
-            background-color: rgb(56, 56, 56);
-            color: white;
-            padding: 10vh 20px 90px 50vh;
+            z-index: 10;
+            height: 85vh;
+            min-height: 560px;
+            margin: 0 20px 0 40px;
         }
+        .text1 {
+            width: 340px;
+            font-size: 2em;
+            margin-top: 25vh;
+        }
+        .photo2 {
+            position: relative;
+            z-index: 10;
+            height: 62vh;
+            min-height: 410px;
+            // width: 46vh;
+            // min-width: 270px;
+            margin: 0 100px 0 20px;
+        }
+    }
+    .text2 {
+        position: relative;
+        z-index: 9;
+        // width: calc(50vh + 840px);
+        font-size: 2em;
+        bottom: 29vh;
+        background-color: rgb(56, 56, 56);
+        color: white;
+        padding: 10vh 20px 200px 50vh;
+        margin: 0 40px 0 15.5vh;
     }
 }

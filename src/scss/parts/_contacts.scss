@@ -1,7 +1,37 @@
 .contacts {
-    min-width: 80vw;
-    min-height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
+    .text {
+        margin: 0 60px;
+        .header {
+            font-size: 3em;
+            text-align: center;
+        }
+        .tel {
+            margin-top: 10px;
+            font-size: 3em;
+            text-align: center;
+        }
+        .items {
+            margin-top: 50px;
+            .item {
+                display: flex;
+                align-items: center;
+                white-space: nowrap;
+                margin-bottom: 20px;
+                .logo {
+                    width: 50px;
+                }
+                .name {
+                    margin-left: 10px;
+                    font-size: 2em;
+                }
+            }
+        }
+    }
+    .photo {
+        height: 100vh;
+        min-height: 660px;
+    }
 }
