@@ -3,26 +3,30 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 40px;
-    .insta-name {
+    background-color: rgb(56, 56, 56);
+    .header {
+        white-space: nowrap;
         font-size: 2.5em;
-        font-weight: normal;
+        margin: 0 1.5em;
+        color: white;
     }
     .item {
         margin-top: 1em;
         display: flex;
         align-items: center;
-        background-color: rgb(154, 105, 72);
+        background-color: white;
         padding: 12px;
-        border-radius: 10px;
+        border-radius: 1px;
         width: 280px;
-        .item-logo {
+        .logo {
             width: 50px;
         }
-        .item-name {
+        .name {
             margin-left: 10px;
-            color: white;
             font-size: 2em;
         }
+    }
+    .item:hover {
+        background-color: rgb(223, 223, 223);
     }
 }

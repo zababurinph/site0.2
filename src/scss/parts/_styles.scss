@@ -1,10 +1,11 @@
-html, body {
-    font-family: 'Cormorant-Light', serif;
+html,
+body {
+    font-family: "Cormorant-Light", serif;
     margin: 0;
 }
 
 main {
-    overflow-x: hidden;
+    overflow: hidden;
     display: flex;
     height: 100vh;
 }
@@ -12,6 +13,10 @@ main {
 .separator {
     border-left: 3px solid rgb(154, 105, 72);
     border-right: 3px solid rgb(154, 105, 72);
+}
+.separator-black {
+    background-color: rgb(56, 56, 56);
+    color: white;
 }
 .separator .text {
     width: 40px;
@@ -22,5 +27,4 @@ main {
 }
 
 @media (max-width: 720px) {
-    
 }

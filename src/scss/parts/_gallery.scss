@@ -1,6 +1,14 @@
 .gallery {
-    min-width: 80vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex: 0 0 95vw;
+    .gallery-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        overflow-y: scroll;
+        .photo {
+            height: 400px;
+            margin: 5px;
+        }
+    }
 }

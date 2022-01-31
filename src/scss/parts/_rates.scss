@@ -36,10 +36,15 @@
                 margin-top: 20px;
                 width: 180px;
                 height: 50px;
+                border-radius: 1px;
                 background-color: rgb(154, 105, 72);
                 color: white;
                 font-size: 1.1em;
                 cursor: pointer;
+                transition: all 0.2s;
+            }
+            .button:hover {
+                background-color: rgb(179, 130, 97);
             }
         }
     }

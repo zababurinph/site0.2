@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "rm -rf ./build/* && webpack serve --hot --progress --config webpack.config.js",
+    "server": "rm -rf ./build/* && webpack serve --hot --progress --config webpack.config.js --open",
     "build": "rm -rf build/main-* && NODE_ENV=production webpack --config webpack.config.js"
   },
   "author": "zababurin.ph",

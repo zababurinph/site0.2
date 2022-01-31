@@ -19,7 +19,10 @@
                 display: flex;
                 align-items: center;
                 white-space: nowrap;
-                margin-bottom: 20px;
+                margin-bottom: 10px;
+                padding: 10px;
+                border-radius: 1px;
+                transition: all 0.2s;
                 .logo {
                     width: 50px;
                 }
@@ -27,6 +30,9 @@
                     margin-left: 10px;
                     font-size: 2em;
                 }
+            }
+            .item:hover {
+                background-color: rgb(224, 224, 224);
             }
         }
     }
