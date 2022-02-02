@@ -10,5 +10,42 @@
             height: 400px;
             margin: 5px;
         }
+        .container {
+            position: relative;
+            .review {
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                width: calc(100% - 10px);
+                height: calc(100% - 13px);
+                display: flex;
+                justify-content: flex-end;
+                background-color: rgba(0, 0, 0, 0.5);
+                color: white;
+                flex-direction: column;
+                opacity: 1;
+                transition: all 0.2s;
+                .header {
+                    display: flex;
+                    margin: 0 10px 5px 10px;
+                    .avatar {
+                        height: 40px;
+                        border-radius: 20px;
+                    }
+                    .header-text {
+                        margin-left: 10px;
+                        .name {
+                            font-size: 1.6em;
+                        }
+                    }
+                }
+                .text {
+                    margin: 0 10px 10px 10px;
+                }
+            }
+            .review:hover {
+                opacity: 1;
+            }
+        }
     }
 }
