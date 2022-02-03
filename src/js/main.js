@@ -3,22 +3,44 @@ import '../scss/main.scss';
 
 const scrollContainer = document.querySelector("main");
 const scrollGallery = document.querySelector(".gallery-container");
-let offset = 0;
+let offsetY = 0;
+let offsetX = 0;
+let scroll = true;
+const deltaV = 0.6;
+let deltaH = 0;
 
-scrollContainer.addEventListener('wheel', (evt) => {
-    evt.preventDefault();
+window.addEventListener('load', () => {
+    let deltaW = scrollContainer.scrollWidth - document.documentElement.clientWidth;
 
-    scrollContainer.scrollLeft += evt.deltaY;
-    scrollContainer.scrollLeft += evt.deltaX;
-});
+    scrollContainer.addEventListener('wheel', (evt) => {
+        deltaH = scrollGallery.offsetHeight - document.documentElement.clientHeight;
+    
+        evt.preventDefault();
+        
+        if (scroll) {
+            // scrollContainer.scrollLeft += evt.deltaY * deltaV;
+            offsetX -= evt.deltaY * deltaV;
+        }
+        // scrollContainer.scrollLeft += evt.deltaX * deltaV;
+        // offsetX -= evt.deltaX * deltaV;
+        scrollContainer.style.transform = `translateX(${offsetX}px)`;
 
-scrollGallery.addEventListener('wheel', (evt) => {
-    evt.preventDefault();
-    offset -= evt.deltaY;
+        if (offsetX > 0) offsetX = 0;
+        if (offsetX < -deltaW) offsetX = -deltaW;
+        // if (offsetX < -2845 && offsetX > -2890) scroll = false;
 
-    if (offset > 0) offset = 0;
-    if (offset < -1650) offset = -1650;
+        // console.log(offsetX, scroll)
+    });
 
-    scrollGallery.style.transform = `translateY(${offset}px)`;
-    scrollContainer.scrollLeft -= evt.deltaY;
+    scrollGallery.addEventListener('wheel', (evt) => {
+        evt.preventDefault();
+        offsetY -= evt.deltaY * deltaV;
+        
+        if (offsetY > 0) { offsetY = 0; scroll = true }
+        else if (offsetY < -deltaH) { offsetY = -deltaH; scroll = true }
+        else scroll = false;
+
+        scrollGallery.style.transform = `translateY(${offsetY}px)`;
+    });
+
 });
