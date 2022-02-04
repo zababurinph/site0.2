@@ -16,7 +16,8 @@ window.addEventListener('load', () => {
     scrollContainer.addEventListener('wheel', (evt) => {
         deltaW = scrollContainer.scrollWidth - document.documentElement.clientWidth;
         deltaH = scrollGallery.offsetHeight - document.documentElement.clientHeight;
-    
+        let offsetGallery = -(document.querySelector(".main").offsetWidth + document.querySelector(".taplink").offsetWidth + document.querySelector(".about").offsetWidth + 93);
+
         evt.preventDefault();
         
         if (scrollBeforeGallery || scrollAfterGallery) { offsetX -= evt.deltaY * deltaV;  }
@@ -24,8 +25,8 @@ window.addEventListener('load', () => {
         
         if (offsetX > 0) offsetX = 0;
         if (offsetX < -deltaW) offsetX = -deltaW;
-        if (offsetX < -2880 && scrollBeforeGallery) { scrollBeforeGallery = false; offsetX = -2880 };
-        if (offsetX > -2880 && scrollAfterGallery) { scrollAfterGallery = false; offsetX = -2880 };
+        if (offsetX < offsetGallery && scrollBeforeGallery) { scrollBeforeGallery = false; offsetX = offsetGallery };
+        if (offsetX > offsetGallery && scrollAfterGallery) { scrollAfterGallery = false; offsetX = offsetGallery };
 
         if (offsetY > 0 && !scrollBeforeGallery) {offsetY = 0; scrollBeforeGallery = true }
         if (offsetY < -deltaH && !scrollAfterGallery) { offsetY = -deltaH; scrollAfterGallery = true }
@@ -35,16 +36,4 @@ window.addEventListener('load', () => {
 
         console.log(offsetX, offsetY, scrollBeforeGallery, scrollAfterGallery);
     });
-
-    // scrollGallery.addEventListener('wheel', (evt) => {
-    //     evt.preventDefault();
-    //     offsetY -= evt.deltaY * deltaV;
-        
-    //     if (offsetY > 0) { offsetY = 0; scroll = true }
-    //     else if (offsetY < -deltaH) { offsetY = -deltaH; scroll = true }
-    //     else scroll = false;
-
-    //     scrollGallery.style.transform = `translateY(${offsetY}px)`;
-    // });
-
 });
