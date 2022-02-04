@@ -1,5 +1,6 @@
 .gallery {
     flex: 0 0 95vw;
+    transition: all 0.1s;
     .gallery-container {
         display: flex;
         justify-content: center;
