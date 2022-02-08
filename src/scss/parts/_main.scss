@@ -1,15 +1,12 @@
 .main {
-    // min-width: 950px;
     display: flex;
-    // flex: 0 0 calc(100vh + 450px);
     justify-content: left;
-    align-items: flex-start;
+    align-items: center;
     .photo1 {
         height: 100vh;
         min-height: 660px;
     }
     .container {
-        // width: 100px;
         margin-top: 200px;
         text-align: center;
         .name {

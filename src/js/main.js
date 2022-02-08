@@ -1,8 +1,9 @@
-import './parts/about.js';
 import '../scss/main.scss';
+// import './parts/about.js';
 
 const scrollContainer = document.querySelector("body");
 const scrollGallery = document.querySelector(".gallery-container");
+const loadPage = document.querySelector(".load");
 let offsetY = 0;
 let offsetX = 0;
 let scrollBeforeGallery = true;
@@ -11,7 +12,12 @@ const deltaV = 0.4;
 let deltaH = 0;
 let deltaW = 0;
 
-window.addEventListener('load', () => {
+// window.addEventListener('load', () => {
+
+window.onload = () => {
+    console.log("OK");
+
+    loadPage.style.transform = 'translateY(-100vh)';
 
     scrollContainer.addEventListener('wheel', (evt) => {
         deltaW = scrollContainer.scrollWidth - document.documentElement.clientWidth;
@@ -36,4 +42,5 @@ window.addEventListener('load', () => {
 
         // console.log(offsetX, offsetY, scrollBeforeGallery, scrollAfterGallery);
     });
-});
+// });
+}

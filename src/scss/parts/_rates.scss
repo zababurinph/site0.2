@@ -14,7 +14,7 @@
         }
         .cost {
             font-size: 2.5em;
-            margin: 20px 0;
+            margin: 15px 0;
         }
         .text {
             background-color: white;
@@ -26,16 +26,14 @@
             position: relative;
             .p {
                 text-align: start;
-                padding-top: 8px;
+                padding-top: 5px;
             }
             .button {
                 position: absolute;
                 bottom: 15px;
                 right: 85px;
-                padding: 10px;
+                padding: 15px;
                 margin-top: 20px;
-                width: 180px;
-                height: 50px;
                 border-radius: 1px;
                 background-color: rgb(154, 105, 72);
                 color: white;
