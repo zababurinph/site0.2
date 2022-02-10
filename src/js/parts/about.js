@@ -3,7 +3,7 @@ const photo1 = document.querySelector('.about').querySelector('.photo1');
 const photo2 = document.querySelector('.about').querySelector('.photo2');
 
 export const translateAboutSeparator = (offset) => {
-    offset = offset / 15;
+    offset = -offset / 10;
 
     separator.style.transform = `translateY(${offset}px) rotate(-90deg) translate(-130vh, 5px)`;
 }

@@ -3,6 +3,7 @@ import '../scss/main.scss';
 import { translateMain } from './parts/main.js';
 import { translateTaplink } from './parts/taplink.js';
 import { translateAboutSeparator, translateAboutPhoto1, translateAboutPhoto2 } from './parts/about.js';
+import { translateGallery } from './parts/gallery.js';
 
 const scrollContainer = document.querySelector("body");
 const scrollGallery = document.querySelector(".gallery-container");
@@ -46,6 +47,7 @@ window.onload = () => {
         if (offsetX < -50 && offsetX > -1640) translateAboutSeparator(offsetX);
         if (offsetX < -160 && offsetX > -2140) translateAboutPhoto1(offsetX);
         if (offsetX < -890 && offsetX > -2750) translateAboutPhoto2(offsetX);
+        if (offsetX < -1315 && offsetX > -2800) translateGallery(offsetX);
 
         // console.log(offsetX);
     });
