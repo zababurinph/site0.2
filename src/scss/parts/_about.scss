@@ -5,32 +5,47 @@
     margin-top: 50px;
     .container {
         display: flex;
-        .photo1 {
+        .box1 {
             position: relative;
             z-index: 10;
+            overflow: hidden;
+            margin: 0 20px 0 40px;
             height: 85vh;
             min-height: 560px;
-            margin: 0 20px 0 40px;
+            width: 56vh;
+            min-width: 373px;
+            .photo1 {
+                position: absolute;
+                top: -5%;
+                height: 110%;
+            }
         }
         .text1 {
             width: 340px;
             font-size: 2em;
             margin-top: 25vh;
         }
-        .photo2 {
+        .box2 {
             position: relative;
             z-index: 10;
+            overflow: hidden;
+            margin: 0 100px 0 20px;
             height: 62vh;
             min-height: 410px;
-            // width: 46vh;
-            // min-width: 270px;
-            margin: 0 100px 0 20px;
+            width: 50vh;
+            min-width: 328px;
+            .photo2 {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 100%;
+            }
         }
     }
     .text2 {
         position: relative;
         z-index: 9;
-        // width: calc(50vh + 840px);
         font-size: 2em;
         bottom: 29vh;
         background-color: rgb(56, 56, 56);

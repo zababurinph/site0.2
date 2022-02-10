@@ -1,9 +1,8 @@
 import '../scss/main.scss';
-import './parts/main.js';
-import './parts/taplink.js';
 
-import { photoTranslate } from './parts/main.js';
-import { separatorTranslate } from './parts/taplink.js';
+import { translateMain } from './parts/main.js';
+import { translateTaplink } from './parts/taplink.js';
+import { translateAboutSeparator, translateAboutPhoto1, translateAboutPhoto2 } from './parts/about.js';
 
 const scrollContainer = document.querySelector("body");
 const scrollGallery = document.querySelector(".gallery-container");
@@ -15,8 +14,6 @@ let scrollAfterGallery = false;
 const deltaV = 0.4;
 let deltaH = 0;
 let deltaW = 0;
-
-// window.addEventListener('load', () => {
 
 window.onload = () => {
     console.log("OK");
@@ -44,9 +41,12 @@ window.onload = () => {
         scrollContainer.style.transform = `translateX(${offsetX}px)`;
         scrollGallery.style.transform = `translateY(${offsetY}px)`;
 
-        photoTranslate(offsetX);
-        separatorTranslate(offsetX);
-        // console.log(offsetX, offsetY, scrollBeforeGallery, scrollAfterGallery);
+        if (offsetX > -950) translateMain(offsetX);
+        if (offsetX > -1225) translateTaplink(offsetX);
+        if (offsetX < -50 && offsetX > -1640) translateAboutSeparator(offsetX);
+        if (offsetX < -160 && offsetX > -2140) translateAboutPhoto1(offsetX);
+        if (offsetX < -890 && offsetX > -2750) translateAboutPhoto2(offsetX);
+
+        // console.log(offsetX);
     });
-    // });
 }

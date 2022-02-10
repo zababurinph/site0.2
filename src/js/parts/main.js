@@ -4,7 +4,7 @@ const name = main.querySelector('.name');
 const mazok = main.querySelector('.div_mazok');
 const sos = main.querySelector('.div_sos');
 
-export const photoTranslate = (offset) => {
+export const translateMain = (offset) => {
     offset = offset / 10;
 
     photo.style.transform = `translateX(${offset}px)`;
