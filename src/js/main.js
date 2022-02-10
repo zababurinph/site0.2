@@ -1,7 +1,9 @@
 import '../scss/main.scss';
 import './parts/main.js';
+import './parts/taplink.js';
 
 import { photoTranslate } from './parts/main.js';
+import { separatorTranslate } from './parts/taplink.js';
 
 const scrollContainer = document.querySelector("body");
 const scrollGallery = document.querySelector(".gallery-container");
@@ -18,8 +20,8 @@ let deltaW = 0;
 
 window.onload = () => {
     console.log("OK");
-
-    loadPage.style.transform = 'translateY(-100vh)';
+    
+    loadPage.style.transform = 'translateX(-100vw)';
 
     scrollContainer.addEventListener('wheel', (evt) => {
         deltaW = scrollContainer.scrollWidth - document.documentElement.clientWidth;
@@ -43,7 +45,8 @@ window.onload = () => {
         scrollGallery.style.transform = `translateY(${offsetY}px)`;
 
         photoTranslate(offsetX);
+        separatorTranslate(offsetX);
         // console.log(offsetX, offsetY, scrollBeforeGallery, scrollAfterGallery);
     });
-// });
+    // });
 }
