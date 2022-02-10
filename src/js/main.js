@@ -1,5 +1,7 @@
 import '../scss/main.scss';
-// import './parts/about.js';
+import './parts/main.js';
+
+import { photoTranslate } from './parts/main.js';
 
 const scrollContainer = document.querySelector("body");
 const scrollGallery = document.querySelector(".gallery-container");
@@ -40,6 +42,7 @@ window.onload = () => {
         scrollContainer.style.transform = `translateX(${offsetX}px)`;
         scrollGallery.style.transform = `translateY(${offsetY}px)`;
 
+        photoTranslate(offsetX);
         // console.log(offsetX, offsetY, scrollBeforeGallery, scrollAfterGallery);
     });
 // });

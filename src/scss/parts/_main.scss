@@ -2,7 +2,7 @@
     display: flex;
     justify-content: left;
     align-items: center;
-    .photo1 {
+    .photo {
         height: 100vh;
         min-height: 660px;
     }
@@ -10,6 +10,7 @@
         margin-top: 200px;
         text-align: center;
         .name {
+            position: relative;
             font-size: 5em;
             text-align: left;
             margin-left: 40px;
@@ -21,6 +22,7 @@
             margin-right: 40px;
         }
         .div_mazok {
+            position: relative;
             margin-top: 2em;
             .mazok {
                 height: 100px;
@@ -33,6 +35,7 @@
             }
         }
         .div_sos {
+            position: relative;
             margin-top: 60px;
             .sos {
                 font-size: 2.6em;
