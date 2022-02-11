@@ -1,15 +1,7 @@
-const main = document.querySelector('.main')
-const photo = main.querySelector('.photo');
-const name = main.querySelector('.name');
-const mazok = main.querySelector('.div_mazok');
-const sos = main.querySelector('.div_sos');
+const photo = document.querySelector('.main').querySelector('.photo');
 
 export const translateMain = (offset) => {
-    offset = offset / 10;
+    offset = -offset;
 
-    photo.style.transform = `translateX(${offset}px)`;
-    name.style.transform = `translateX(${offset}px)`;
-    mazok.style.transform = `translateX(${offset/2}px)`;
-    sos.style.transform = `translateX(${offset/2}px)`;
-    // console.log(offset)
+    photo.style.transform = `translate(calc(-50% + ${offset}px), -50%)`;
 }

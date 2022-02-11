@@ -4,6 +4,8 @@ import { translateMain } from './parts/main.js';
 import { translateTaplink } from './parts/taplink.js';
 import { translateAboutSeparator, translateAboutPhoto1, translateAboutPhoto2 } from './parts/about.js';
 import { translateGallery } from './parts/gallery.js';
+import { translateRatesSeparator } from './parts/rates.js';
+import { translateContactsSeparator, translateContactsPhoto } from './parts/contacts.js';
 
 const scrollContainer = document.querySelector("body");
 const scrollGallery = document.querySelector(".gallery-container");
@@ -17,13 +19,13 @@ let deltaH = 0;
 let deltaW = 0;
 
 window.onload = () => {
-    console.log("OK");
+    console.log("Load completed!");
     
     loadPage.style.transform = 'translateX(-100vw)';
 
     scrollContainer.addEventListener('wheel', (evt) => {
-        deltaW = scrollContainer.scrollWidth - document.documentElement.clientWidth;
-        deltaH = scrollGallery.offsetHeight - document.documentElement.clientHeight;
+        deltaW = scrollContainer.scrollWidth - document.documentElement.clientWidth - 1;
+        deltaH = scrollGallery.offsetHeight - document.documentElement.clientHeight + 100;
         let offsetGallery = -(document.querySelector(".main").offsetWidth + document.querySelector(".taplink").offsetWidth + document.querySelector(".about").offsetWidth + 93);
 
         evt.preventDefault();
@@ -47,7 +49,10 @@ window.onload = () => {
         if (offsetX < -50 && offsetX > -1640) translateAboutSeparator(offsetX);
         if (offsetX < -160 && offsetX > -2140) translateAboutPhoto1(offsetX);
         if (offsetX < -890 && offsetX > -2750) translateAboutPhoto2(offsetX);
-        if (offsetX < -1315 && offsetX > -2800) translateGallery(offsetX);
+        if (offsetX < -1315 && offsetX > -3000) translateGallery(offsetX);
+        if (offsetX < -2730 && offsetX > -4475) translateRatesSeparator(offsetX);
+        if (offsetX < -4070) translateContactsSeparator(offsetX);
+        if (offsetX < -4800) translateContactsPhoto(offsetX, deltaW);
 
         // console.log(offsetX);
     });

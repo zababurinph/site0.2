@@ -3,7 +3,6 @@
     justify-content: left;
     align-items: center;
     .text {
-        margin: 0 60px;
         .header {
             font-size: 3em;
             text-align: center;
@@ -19,12 +18,12 @@
                 display: flex;
                 align-items: center;
                 white-space: nowrap;
-                margin-bottom: 10px;
-                padding: 10px;
+                padding: 15px 60px;
                 border-radius: 1px;
-                transition: all 0.2s;
+                transition: all 0.4s;
                 .logo {
                     width: 50px;
+                    transition: all 0.1s;
                 }
                 .name {
                     margin-left: 10px;
@@ -32,12 +31,27 @@
                 }
             }
             .item:hover {
-                background-color: rgb(224, 224, 224);
+                color: white;
+                background-color: rgb(56, 56, 56);
+                .logo {
+                    filter: invert(1);
+                }
             }
         }
     }
-    .photo {
+    .box {
+        position: relative;
+        overflow: hidden;
         height: 100vh;
         min-height: 660px;
+        width: 66vh;
+        min-width: 440px;
+        .photo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-80%, -50%);
+            height: 100%;
+        }
     }
 }
