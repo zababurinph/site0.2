@@ -20,12 +20,104 @@
             height: 100vh;
             top: 0;
             left: 0;
-            background-color: black;
+            background-color: white;
             transition: transform 2s;
         }
+        .load .header {
+            text-align: center;
+            font-size: 400%;
+            margin-top: 20%;
+        }
+        .load .spinner {
+            margin: 30px 50%;
+        }
+        .load .spinner .blob {
+            position: relative;
+            border: 3px solid black;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+        .load .spinner .top {
+            top: 0;
+            left: 0;
+            animation: blob-top 2s infinite ease-in;
+        }
+        .load .spinner .bottom {
+            top: 40px;
+            left: 0;
+            animation: blob-bottom 2s infinite ease-in;
+        }
+        .load .spinner .left {
+            top: -25px;
+            left: -40px;
+            animation: blob-left 2s infinite ease-in;
+        }
+        .load .spinner .move-blob {
+            background-color: black;
+            top: -90px;
+            left: 0;
+            animation: move-blob 2s infinite ease-in;
+        }
+        @keyframes move-blob {
+            0%, 100% {
+                top: -90px;
+                left: 0;
+            }
+            25% {
+                top: -55px;
+                left: 40px;
+            }
+            50% {
+                top: -20px;
+                left: 0;
+            }
+            75% {
+                top: -55px;
+                left: -40px;
+            }
+        }
+        @keyframes blob-bottom {
+            25%, 50%, 75% {
+                top: 5px;
+                left: 40px;
+            }
+            100% {
+                top: -25px;
+                left: 0;
+            }
+        }
+        @keyframes blob-left {
+            50%, 75%, 100% {
+                top: 10px;
+                left: 0;
+            }
+            25% {
+                top: -25px;
+                left: -40px;
+            }
+        }
+        @keyframes blob-top {
+            75%, 100% {
+                top: 35px;
+                left: -40px;
+            }
+            25%, 50% {
+                top: 0;
+                left: 0;
+            }
+        }
     </style>
-    <div class="load"></div>
     
+    <div class="load">
+        <h1 class="header">zababurin.ph</h1>
+        <div class="spinner">
+            <div class="blob top"></div>
+            <div class="blob bottom"></div>
+            <div class="blob left"></div>
+            <div class="blob move-blob"></div>
+          </div>
+    </div>
 
     <%= require('html-loader!./views/main.html').default %>
     
