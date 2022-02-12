@@ -20,10 +20,10 @@
                 white-space: nowrap;
                 padding: 15px 60px;
                 border-radius: 1px;
-                transition: all 0.4s;
+                transition: color 0.4s, background-color 0.4s;
                 .logo {
                     width: 50px;
-                    transition: all 0.1s;
+                    transition: filter 0.1s;
                 }
                 .name {
                     margin-left: 10px;

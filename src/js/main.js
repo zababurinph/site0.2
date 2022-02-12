@@ -20,6 +20,10 @@ window.onload = () => {
     console.log("Load completed!");
 
     loadPage.style.transform = 'translateX(-100vw)';
+    document.querySelector('.top').style.animation = 'none';
+    document.querySelector('.bottom').style.animation = 'none';
+    document.querySelector('.left').style.animation = 'none';
+    document.querySelector('.move-blob').style.animation = 'none';
 
     scrollContainer.addEventListener('wheel', (evt) => {
         let deltaW = scrollContainer.scrollWidth - document.documentElement.clientWidth - 1;
@@ -53,7 +57,7 @@ window.onload = () => {
         if (offsetX < -4800) translateContactsPhoto(offsetX, deltaW);
 
         // console.log(offsetX);
-    });
+    }, { passive: false });
 }
 
 window.addEventListener("mousewheel", (evt) => {

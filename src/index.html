@@ -29,10 +29,11 @@
             margin-top: 20%;
         }
         .load .spinner {
+            position: relative;
             margin: 30px 50%;
         }
         .load .spinner .blob {
-            position: relative;
+            position: absolute;
             border: 3px solid black;
             width: 30px;
             height: 30px;
@@ -44,63 +45,63 @@
             animation: blob-top 2s infinite ease-in;
         }
         .load .spinner .bottom {
-            top: 40px;
+            top: 4em;
             left: 0;
             animation: blob-bottom 2s infinite ease-in;
         }
         .load .spinner .left {
-            top: -25px;
-            left: -40px;
+            top: 2em;
+            left: -2.5em;
             animation: blob-left 2s infinite ease-in;
         }
         .load .spinner .move-blob {
             background-color: black;
-            top: -90px;
+            top: 0;
             left: 0;
             animation: move-blob 2s infinite ease-in;
         }
         @keyframes move-blob {
-            0%, 100% {
-                top: -90px;
+            100% {
+                top: 0;
                 left: 0;
             }
             25% {
-                top: -55px;
-                left: 40px;
+                top: 2em;
+                left: 2.5em;
             }
             50% {
-                top: -20px;
+                top: 4em;
                 left: 0;
             }
             75% {
-                top: -55px;
-                left: -40px;
+                top: 2em;
+                left: -2.5em;
             }
         }
         @keyframes blob-bottom {
-            25%, 50%, 75% {
-                top: 5px;
-                left: 40px;
+            25%, 50%, 75%, 100% {
+                top: 2em;
+                left: 2.5em;
             }
             100% {
-                top: -25px;
+                top: 0;
                 left: 0;
             }
         }
         @keyframes blob-left {
             50%, 75%, 100% {
-                top: 10px;
+                top: 4em;
                 left: 0;
             }
             25% {
-                top: -25px;
-                left: -40px;
+                top: 2em;
+                left: -2.5em;
             }
         }
         @keyframes blob-top {
             75%, 100% {
-                top: 35px;
-                left: -40px;
+                top: 2em;
+                left: -2.5em;
             }
             25%, 50% {
                 top: 0;
