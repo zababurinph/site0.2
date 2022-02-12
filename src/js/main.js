@@ -18,7 +18,7 @@ const deltaV = 0.4;
 
 window.onload = () => {
     console.log("Load completed!");
-    
+
     loadPage.style.transform = 'translateX(-100vw)';
 
     scrollContainer.addEventListener('wheel', (evt) => {
@@ -55,3 +55,10 @@ window.onload = () => {
         // console.log(offsetX);
     });
 }
+
+window.addEventListener("mousewheel", (evt) => {
+    if (evt.ctrlKey) {
+        evt.preventDefault();
+        return false;
+    }
+});
